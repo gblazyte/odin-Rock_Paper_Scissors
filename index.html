@@ -13,6 +13,13 @@
     <button id="paper">Paper</button>
     <button id="scissors">Scissors</button>
 
+    <div id="gameResult">
+        <!-- <div id="playerChoice"></div>
+        <div id="computerChoice"></div>
+        <div id="result"></div> -->
+    </div>
+
+
     <script>
 
         function getComputerChoice() {
@@ -47,18 +54,29 @@
         const rock = document.querySelector('#rock');
         const paper = document.querySelector('#paper');
         const scissors = document.querySelector('#scissors');
+        const gameResult = document.querySelector('#gameResult');
+        const content = document.createElement('div');
 
         rock.addEventListener('click', function () {
-            let playerSelectionRock = "rock";
-            console.log(playRound(playerSelectionRock, computerSelection));
+            let playerSelectionRock = 'rock';
+            let result = playRound(playerSelectionRock, computerSelection);
+            content.classList.add('content');
+            content.textContent = `The result is: ${result}`;
+            gameResult.appendChild(content);
         });
         paper.addEventListener('click', function () {
             let playerSelectionRock = "paper";
-            console.log(playRound(playerSelectionRock, computerSelection));
+            let result = playRound(playerSelectionRock, computerSelection);
+            content.classList.add('content');
+            content.textContent = `The result is: ${result}`;
+            gameResult.appendChild(content);
         });
         scissors.addEventListener('click', function () {
             let playerSelectionRock = "scissors";
-            console.log(playRound(playerSelectionRock, computerSelection));
+            let result = playRound(playerSelectionRock, computerSelection);
+            content.classList.add('content');
+            content.textContent = `The result is: ${result}`;
+            gameResult.appendChild(content);
         });
 
         //console.log(playRound(playerSelection, computerSelection));
