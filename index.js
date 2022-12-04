@@ -38,9 +38,8 @@ function playRound(playerSelection, computerSelection) {
 function resetGame() {
     player = 0;
     computer = 0;
-    playerDisplayScore.textContent = 0;
-    computerDisplayScore.textContent = 0;
-    gameResult.textContent = "";
+    playerDisplayScore.textContent = "";
+    computerDisplayScore.textContent = "";
 }
 
 function game(e) {
@@ -48,8 +47,6 @@ function game(e) {
     if (round == "You Win!") {
         player++;
         computer += 0;
-        console.log(this.id)
-        console.log(getComputerChoice())
 
     } else if (round == "You Lose!") {
         computer++;
@@ -67,8 +64,11 @@ function game(e) {
     if (player == 5 || computer == 5) {
         if (player > computer) {
             gameResult.textContent = `You won with the score of ${player}`
-        } else if (player < computer)
+        } else if (player < computer) {
             gameResult.textContent = `You lost with the score of ${player}`
+
+        }
+        resetGame();
     }
 
 }
