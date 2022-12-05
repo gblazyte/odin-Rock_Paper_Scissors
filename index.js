@@ -44,13 +44,16 @@ function resetGame() {
 
 function game(e) {
     let round = playRound(this.id, getComputerChoice());
+
     if (round == "You Win!") {
         player++;
         computer += 0;
+        gameResult.textContent = '+1 to you!';
 
     } else if (round == "You Lose!") {
         computer++;
         player += 0;
+        gameResult.textContent = '+1 for the computer!';
     } else {
         player += 0;
         computer += 0;

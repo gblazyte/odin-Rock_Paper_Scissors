@@ -1,0 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffd60a;
+}
+
+span {
+    font-size: 20px;
+}
+
+#gameResult {
+    font-size: 20px;
+}
