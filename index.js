@@ -68,7 +68,7 @@ function game(e) {
         if (player > computer) {
             gameResult.textContent = `You won with the score of ${player}! Congratulations :)`
         } else if (player < computer) {
-            gameResult.textContent = `You lost with the score of ${player}! Congratulations :)`
+            gameResult.textContent = `You lost with the score of ${player}! Better luck next time :)`
 
         }
         resetGame();
