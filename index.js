@@ -57,7 +57,7 @@ function game(e) {
     } else {
         player += 0;
         computer += 0;
-        gameResult.textContent = round;
+        gameResult.textContent = `${round} No point for either of you!`;
     }
 
     playerDisplayScore.textContent = `The player score: ${player}`;
@@ -66,9 +66,9 @@ function game(e) {
 
     if (player == 5 || computer == 5) {
         if (player > computer) {
-            gameResult.textContent = `You won with the score of ${player}`
+            gameResult.textContent = `You won with the score of ${player}! Congratulations :)`
         } else if (player < computer) {
-            gameResult.textContent = `You lost with the score of ${player}`
+            gameResult.textContent = `You lost with the score of ${player}! Congratulations :)`
 
         }
         resetGame();
